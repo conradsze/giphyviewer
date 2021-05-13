@@ -5,7 +5,8 @@ This application is created for gif searching and it can also bookmark users’ 
 
 <h3>Application Design </h4>
 Data flow
-<img width="467" alt="Screen Shot 2021-05-13 at 4 32 10 PM" src="https://user-images.githubusercontent.com/11471832/118108319-6f05e380-b412-11eb-84cd-d03a8ad3a812.png">
+<img width="510" alt="Screen Shot 2021-05-13 at 5 59 04 PM" src="https://user-images.githubusercontent.com/11471832/118110477-066c3600-b415-11eb-8e1e-4026d900452b.png">
+
 
 <h4>operation</h5>
 <img width="495" alt="Screen Shot 2021-05-13 at 5 09 31 PM" src="https://user-images.githubusercontent.com/11471832/118108377-81801d00-b412-11eb-9715-e0556122828f.png">

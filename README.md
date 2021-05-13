@@ -4,21 +4,19 @@
 This application is created for gif searching and it can also bookmark users’ favorite gifs. It pulls data from Giphy API. This application is built with jquery3.4 and bootstrap4.1 and written in Javascript and HTML
 
 <h4>Application Design </h4>
+Data flow
+<img width="467" alt="Screen Shot 2021-05-13 at 4 32 10 PM" src="https://user-images.githubusercontent.com/11471832/118108319-6f05e380-b412-11eb-84cd-d03a8ad3a812.png">
 
-A component design graph is required for this section, also the data flow for read and write operation. 
-
-<img src="https://imgur.com/iQNn3wr">
-
-<img src="https://imgur.com/UO8d6P1">
+<img width="495" alt="Screen Shot 2021-05-13 at 5 09 31 PM" src="https://user-images.githubusercontent.com/11471832/118108377-81801d00-b412-11eb-9715-e0556122828f.png">
 enter the APIkey from Giphy
 
-<img src="https://imgur.com/9KdcKUd">
+<img width="1193" alt="Screen Shot 2021-05-13 at 5 10 04 PM" src="https://user-images.githubusercontent.com/11471832/118108411-8a70ee80-b412-11eb-8523-01823403e038.png">
 search a topic
 
-<img src="https://imgur.com/RnlMHNr">
+<img width="236" alt="Screen Shot 2021-05-13 at 5 10 19 PM" src="https://user-images.githubusercontent.com/11471832/118108435-92309300-b412-11eb-83c1-7bf2861540ef.png">
 bookmark the gif by clicking the heart
 
-<img src="https://imgur.com/hIZcVeE">
+<img width="1185" alt="Screen Shot 2021-05-13 at 5 10 42 PM" src="https://user-images.githubusercontent.com/11471832/118108451-99f03780-b412-11eb-82f7-6635c9afd86e.png">
 bookmarked gif will be show in "my favorite GIF"
 
 <h4>Approach </h4>

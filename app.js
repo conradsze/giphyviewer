@@ -1,5 +1,6 @@
 // apikey will be provided by client
-const apikey = (typeof api_key === 'undefined') ? prompt("Please enter the API key from https://developers.giphy.com/"):api_key ;
+// const apikey = (typeof api_key === 'undefined') ? prompt("Please enter the API key from https://developers.giphy.com/"):api_key ;
+const encrypted_key = '{\"iv\":\"j3ZONQqaovn7CjKIdM0BjQ==\",\"v\":1,\"iter\":10000,\"ks\":128,\"ts\":64,\"mode\":\"ccm\",\"adata\":\"\",\"cipher\":\"aes\",\"salt\":\"bjFAV+b94/A=\",\"ct\":\"Sn7lg3pLyO6/U6ZUTcHl2e9EylShUTPJWZu7m1Agk/l2xFVukzzzcg==\"}';
 const search_url = "https://api.giphy.com/v1/gifs/search"
 let offset
 // getting favioute list from local storage
@@ -35,7 +36,7 @@ let likeBtn = function(g) {
 $("#search").click(function(event){
 	event.preventDefault();
 	offset = 0
-	$.get( search_url, { api_key: apikey, q: $("#query").val(), offset: offset } )
+	$.get( search_url, { api_key: sjcl.decrypt("encrypted",encrypted_key), q: $("#query").val(), offset: offset } )
 	.done(function( data ) {
 		offset = data.pagination.count + data.pagination.offset
 		console.log(data)
@@ -51,7 +52,7 @@ $("#search").click(function(event){
 //function that handle scroll for more result
 $(window).scroll(function(){
     if($(window).scrollTop() == $(document).height() - $(window).height()) {
-    	$.get( search_url, { api_key: apikey, q: $("#query").val(), offset: offset } )
+    	$.get( search_url, { api_key: sjcl.decrypt("encrypted",encrypted_key), q: $("#query").val(), offset: offset } )
     	.done(function( data ) {
     		offset = data.pagination.count + data.pagination.offset
     		if(offset==data.pagination.total_count){
@@ -69,7 +70,7 @@ $(window).scroll(function(){
 $("#fav").click(function(event){
 	event.preventDefault();
 	if(favList.length >=1 && favList != ""){
-		$.get( "https://api.giphy.com/v1/gifs", { api_key: apikey, ids:localStorage.getItem('favList')} )
+		$.get( "https://api.giphy.com/v1/gifs", { api_key: sjcl.decrypt("encrypted",encrypted_key), ids:localStorage.getItem('favList')} )
 		.done(function( data ) {
 			console.log(data)
 			$("#result").empty()

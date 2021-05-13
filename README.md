@@ -28,11 +28,9 @@ Since the backend data is mostly provided by Giphy API, it only requires a well 
 
 Gif is fun to watch, can also send to others to explain a feeling. People can use this app to kill time and bookmark some gifs to enjoy. This app can have an area to show ads which can make profit. Furthermore, advertising companies can pay to prioritize gifs that are related to their business in the result if several keywords are being searched. 
 
-Potentially the business outcome and usability for this application. 
-
 <h3>Go Live  </h4>
 
-It is live on <https://conradsze.github.io/giphyviewer/> already. If possible, will make it mobile friendly and also find a way to hide the API key.
+It is live on <https://conradsze.github.io/giphyviewer/> already. If possible, will make it more mobile friendly and also find a way to hide the API key.
 
 <h3>Source Code  </h4>
 

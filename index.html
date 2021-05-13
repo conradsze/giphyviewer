@@ -13,13 +13,25 @@
 
 </head>
 <body>
+	<div class="container">
+	    <form id="searchForm">
+	        <div class="input-group mb-3">
+	            <input id="query" type="text" class="form-control" placeholder="Search for a gifs"
+	                   aria-label="Recipient's username"
+	                   aria-describedby="button-addon2">
+	            <div class="input-group-append">
+	                <button class="btn btn-outline-secondary" id="search">Search</button>
+	                <button class="btn btn-outline-secondary" id="fav">My Favorite GIF</button>
+	            </div>
+	        </div>
+	    </form>
 
-	<h1>
-	<input type="search" value="" id="query" placeholder="Search" class="form-control form-control-lg form-control-borderless" style="width: 280px;">
-	<button class="btn btn-lg btn-success" id="search">search</button>
-	<button class="btn btn-lg btn-success" id="fav">My Favorite GIF</button>
-	</h1>
-	<div id="result"></div>
+	    <div id="result">
+
+	    </div>
+
+	</div>
+
 </body>
 <script type="text/javascript" src="apikey.js"></script>
 <script type="text/javascript" src="app.js"></script>

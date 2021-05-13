@@ -8,9 +8,9 @@ let favList = localStorage.getItem('favList')|| ""
 let append = function(g){
 //append the gif and also indicate if the gif is on the favioute list
 			let isFav = (favList.indexOf(g.id) == -1)? "":"animate"
-			$("#result").append( "<div><img src='"+ g.images.fixed_height.url 
-				+"'> <h3><div id='"+g.id+"' class='HeartAnimation "
-				+ isFav +"'></div></h3></div>" )
+			$("#result").append( "<div class='img-wrapper'><div class='inner'><img src='"+ g.images.fixed_height.url 
+				+"'> <h3>"+g.title.replace(/(.{15})..+/, "$1&hellip;")+"<div id='"
+				+g.id+"' class='HeartAnimation " + isFav +"'></div></h3></div></div>" )
 
 // handle clicking on the like button
 		    $(".HeartAnimation").last().click(function(e){
@@ -32,7 +32,8 @@ let likeBtn = function(g) {
 		  }
 
 //function that handle the search result
-$("#search").click(function(){
+$("#search").click(function(event){
+	event.preventDefault();
 	offset = 0
 	$.get( search_url, { api_key: apikey, q: $("#query").val(), offset: offset } )
 	.done(function( data ) {
@@ -65,7 +66,8 @@ $(window).scroll(function(){
     }
 });
 //function that manage gif on the fav list
-$("#fav").click(function(){
+$("#fav").click(function(event){
+	event.preventDefault();
 	if(favList.length >=1 && favList != ""){
 		$.get( "https://api.giphy.com/v1/gifs", { api_key: apikey, ids:localStorage.getItem('favList')} )
 		.done(function( data ) {
